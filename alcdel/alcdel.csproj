@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\lib\lib.csproj">
+      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\lib2\lib2.csproj">
+      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ContentWithTargetPath Include="..\lib\bin\Debug\netstandard2.0\lib.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>subs\lib.dll</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="..\lib2\bin\Debug\netstandard2.0\lib2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>subs\lib2.dll</TargetPath>
+    </ContentWithTargetPath>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>
